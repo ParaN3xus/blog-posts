@@ -144,16 +144,16 @@ Pivoter 算法借鉴了 BK 算法的 Pivot 思想, 通过选择一个顶点作�
         + *Continue*
       + $p <- arg max_p abs(N(S, p))$
       + $cal(N) <- "new node labeled by" N(S, p)$
-      + #line-label(<line-build-sct-c2>) $tree <- tree "with link labeled by" (p, pivot) "from" cal(P) "to" cal(N)$
+      + $tree <- tree "with link labeled by" (p, pivot) "from" cal(P) "to" cal(N)$
       + $"Push" cal(N) "into" Q$
       + ${v_1, v_2, ..., v_l} <- S \\ (p union N(p))$
       + *For* $i < l$:
         + $cal(N)_2 <- "new node labeled by" N(S, v_i) \\ {v_1, v_2, ..., v_(i - 1)}$
-        + #line-label(<line-build-sct-c3>) $tree <- tree "with link labeled by" (v_i, hold) "from" cal(N) "to" cal(N)_2$
+        + $tree <- tree "with link labeled by" (v_i, hold) "from" cal(N) "to" cal(N)_2$
         + $"Push" cal(N)_2 "into" Q$
     + *Return* $bold(T)$
 ]
-这其中 @line-build-sct-c2 和 @line-build-sct-c3 分别对应了上面所说的第二类和第三类团.
+这其中新建到 $cal(N)$ 的连接和新建到 $cal(N)_2$ 的连接分别对应了上面所说的第二类和第三类团.
 
 === SCT 的性质及证明 <sect-sct-prop>
 / SCT 的唯一编码性: 对于图和在图上构建的 SCT $tree$, 图中的每个团都能被唯一表示为 $H(T) union Q$. 其中 $Q subset.eq P(T)$, $T$ 是 SCT 上一条从根到叶的路径.
