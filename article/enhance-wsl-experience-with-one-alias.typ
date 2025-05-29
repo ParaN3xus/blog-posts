@@ -9,6 +9,7 @@
   tags: (
     blog-tags.linux,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 简而言之, 运行：

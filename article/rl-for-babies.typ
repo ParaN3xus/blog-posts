@@ -11,6 +11,7 @@
     blog-tags.rl,
     blog-tags.math,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 #set math.equation(numbering: "(1)")

@@ -7,6 +7,7 @@
   tags: (
     blog-tags.free-ride,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 今年早些时候在群友那里了解到 giffgaff, 本着"反正不花钱, 不要白不要"的原则一口气申请了三张, 结果一张都没到.

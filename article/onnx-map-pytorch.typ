@@ -11,6 +11,7 @@
     blog-tags.ai,
     blog-tags.pytorch,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 = 缘由

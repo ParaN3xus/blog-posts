@@ -10,6 +10,7 @@
     blog-tags.typst,
     blog-tags.summary,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 很早之前就读过了 #link("https://github.com/Enter-tainer")[\@mgt] 大佬的 #link("https://blog.mgt.moe/posts/typst-in-2023/")[我与 typst 的 2023], 觉得很酷, 于是决定自己也写一个. 不过当时是年初, 那时候我还只是一个普普通通的 Typst user, 没什么能说的出来的贡献. 时间一晃就到了现在, 我也总算是做了一点微薄的贡献, 可以拿出来说一说了.

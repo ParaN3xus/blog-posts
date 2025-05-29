@@ -7,6 +7,7 @@
   tags: (
     blog-tags.linux,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 继 Debian + Gnome 用了没几天就换回 Windows 吃灰后, 又下定了一次决心日用纯 Linux 系统. 这一次我装了 Arch + Hyprland, 在 Arch 强大的生态和自定义能力的加持下终于也算用了一个月. 虽然系统还是有各种小问题无法解决, 但是稍微忍忍已经完全能用了. 所以这篇 Blog 就是记录我是怎么调教 NVIDIA + Hyprland + Arch 打到一个相对良好的状态的.

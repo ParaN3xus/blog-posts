@@ -8,6 +8,7 @@
     blog-tags.network,
     blog-tags.free-ride,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 很早之前就想自建一个 Git server, 终于在这个月早些动工了.

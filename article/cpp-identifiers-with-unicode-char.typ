@@ -10,6 +10,7 @@
     blog-tags.cpp,
     blog-tags.programming,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 这其实是我的课程作业, 但是因为确实解决了我的一大疑惑和内容比较充实, 所以发到这里.

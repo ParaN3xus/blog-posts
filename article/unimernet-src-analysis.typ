@@ -11,6 +11,7 @@
     blog-tags.programming,
     blog-tags.pytorch,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 #link("https://github.com/opendatalab/UniMERNet")[UniMerNet] 是一个针对数学公式的 TrOCR 模型. 基本上, 他是一个 #link("https://github.com/clovaai/donut")[Donut] 的变体, 包含一个修改过的 Swin Encoder 和一个修改过的 BART Decoder.

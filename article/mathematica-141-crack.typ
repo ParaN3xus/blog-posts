@@ -11,6 +11,7 @@
     blog-tags.free-ride,
     blog-tags.math,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 最近 Wolfram 发布了新的 Mathematica 14.1 版本, 打破了之前不需要改注册机就能一直用的局面, 不过所幸毛子又发了新的[^1], 目测好像就是更新了以下 magic 值, 算法并无大的改动.

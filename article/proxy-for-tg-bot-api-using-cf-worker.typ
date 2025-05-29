@@ -10,6 +10,7 @@
     blog-tags.programming,
     blog-tags.network,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 *本代码已修复 "Bad Request: message text is empty" 异常. *

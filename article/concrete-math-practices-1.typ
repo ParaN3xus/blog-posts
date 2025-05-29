@@ -7,6 +7,7 @@
   tags: (
     blog-tags.math,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 

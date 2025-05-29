@@ -8,6 +8,7 @@
     blog-tags.cpp,
     blog-tags.programming,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 

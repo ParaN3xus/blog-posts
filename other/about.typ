@@ -7,6 +7,7 @@
   ],
   date: "2024-07-27",
   tags: (),
+  license: licenses.cc-by-nc-sa,
 )
 
 初学计算机专业, 或者不专精计算机工程, 甚至非计算机背景的人员.

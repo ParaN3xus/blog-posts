@@ -10,6 +10,7 @@
     blog-tags.network,
     blog-tags.free-ride,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 本教程仅供研究学习使用, 请在部署后 24h 内撤销所有更改并恢复原状, 本教程作者对依据本教程行动带来的后果概不负责.

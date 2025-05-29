@@ -10,6 +10,7 @@
     blog-tags.math,
     blog-tags.probablities,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 #let levels = (

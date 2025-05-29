@@ -7,6 +7,7 @@
   tags: (
     blog-tags.thinking,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 当我不加思考地贬低和否定新事物, 不再认为情况会有所改善时, 我就变老了.

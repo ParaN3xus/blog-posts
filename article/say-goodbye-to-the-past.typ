@@ -9,6 +9,7 @@
   tags: (
     blog-tags.thinking,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 希望少犯之前犯过的错

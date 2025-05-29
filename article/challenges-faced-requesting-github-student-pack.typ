@@ -7,6 +7,7 @@
   tags: (
     blog-tags.free-ride,
   ),
+  license: licenses.cc-by-nc-sa,
 )
 
 心血来潮(早有预谋)想要申请 GitHub 学生包, 跟随网上已有的教程走了一遭发现还是有一些没法解决的问题, 经过一些摸索后决定写这篇踩坑.
