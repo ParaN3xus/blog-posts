@@ -157,26 +157,24 @@ $ <eq-dqn-loss>
 车杆问题(如 @fig-cart-pole)是一个经典控制问题, 其基本环境由一个可在水平轨道上左右移动的小车和一根铰接在小车上的直杆组成. 杆的初始状态略有倾斜, 因此会因重力而自然倾倒. 我们的目标是通过控制小车的左右移动, 使杆保持竖直平衡状态尽可能长的时间, 要求杆与竖直方向的夹角不超过特定阈值, 同时小车不能超出轨道边界.
 
 #figure(
-  auto-div-frame(
-    cetz.canvas(
-      length: 2em,
-      {
-        import cetz.draw: *
+  auto-div-frame(theme => cetz.canvas(
+    length: 2em,
+    {
+      import cetz.draw: *
 
-        set-style(stroke: main-color)
+      set-style(stroke: theme.main-color)
 
-        line((-2, 0.25), (2, 0.25))
-        circle((-0, 0.5), radius: 0.1)
+      line((-2, 0.25), (2, 0.25))
+      circle((-0, 0.5), radius: 0.1)
 
-        rect((-0.5, 0), (0.5, 0.5))
+      rect((-0.5, 0), (0.5, 0.5))
 
-        line((0, 0.5), (0, 2))
+      line((0, 0.5), (0, 2))
 
-        content((0, -0.4), "Cart")
-        content((0.7, 1.2), "Pole")
-      },
-    ),
-  ),
+      content((0, -0.4), "Cart")
+      content((0.7, 1.2), "Pole")
+    },
+  )),
   caption: [车杆问题示意图],
 ) <fig-cart-pole>
 
