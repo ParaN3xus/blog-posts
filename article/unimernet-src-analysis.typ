@@ -99,7 +99,7 @@ class StemLayer(nn.Module):
         x = self.conv2(x)
         return x
 ```
-把 patch 换成卷积已经是一个很常见的魔改了, 据说好处很多, 能加快收敛, 提高表现等等, 一个讨论见 #link("https://arxiv.org/abs/2106.14881")[Early Convolutions Help Transformers See Better].
+把 patch 换成卷积已经是一个很常见的魔改了.
 
 == Convolutional Enhancement(CE)
 UniMerNet 认为 Transformer 能较好地捕捉全局信息, 但是对于数学公式识别来说, 一些局部信息(小的上下标等)也很重要. 所以, 他们在每个 Swin Layer 的 Window Attention 和 MLP 层之前都加了一个 Kernel Size = 3*3, Stride = 1 的卷积, 也即 Convolutional Enhancement 模块:

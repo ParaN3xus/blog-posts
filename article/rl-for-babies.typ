@@ -45,10 +45,10 @@ $
 
 而在状态 $s$ 上执行动作 $a$ 时, 遵循策略 $pi$ 的总回报期望(*动作价值函数*)是
 $
-  Q^pi (s, a) =& EE(G_t mid(|) s_t = s, a_t = a) \
-  =& EE(sum_(k = 0)^oo gamma^k R_(t + k) mid(|) s_t = s, a_t = a) \
-  =& EE(R_t + gamma sum_(k = 0)^oo gamma^k R_(t + k + 1) mid(|) s_t = s, a_t = a) \
-  =& r(s,a) + gamma EE(sum_(k = 0)^oo gamma^k R_(t + k + 1) mid(|) s_t = s, a_t = a) \
+  Q^pi (s, a) = & EE(G_t mid(|) s_t = s, a_t = a)                                                 \
+              = & EE(sum_(k = 0)^oo gamma^k R_(t + k) mid(|) s_t = s, a_t = a)                    \
+              = & EE(R_t + gamma sum_(k = 0)^oo gamma^k R_(t + k + 1) mid(|) s_t = s, a_t = a)    \
+              = & r(s,a) + gamma EE(sum_(k = 0)^oo gamma^k R_(t + k + 1) mid(|) s_t = s, a_t = a) \
 $
 
 这里 $s_(t + 1)$ 是一个分布, 如果能得知在某个状态上执行策略 $pi$ 的总回报期望(*状态价值函数*), 我们还能继续分解上式末尾的 $EE(dot)$, 于是我们定义这个值
@@ -57,8 +57,8 @@ $
 $
 正如刚刚说的, 我们可以继续变形 $Q$:
 $
-  Q^pi (s, a) =& r(s,a) + gamma EE(sum_(k = 0)^oo gamma^k R_(t + k + 1) mid(|) s_t = s, a_t = a) \
-  =& r(s,a) + gamma sum_(s' in S) P(s' mid(|) s, a) V^pi (s') \
+  Q^pi (s, a) = & r(s,a) + gamma EE(sum_(k = 0)^oo gamma^k R_(t + k + 1) mid(|) s_t = s, a_t = a) \
+              = & r(s,a) + gamma sum_(s' in S) P(s' mid(|) s, a) V^pi (s')                        \
 $
 
 现在看看我们得到了什么
@@ -157,24 +157,21 @@ $ <eq-dqn-loss>
 车杆问题(如 @fig-cart-pole)是一个经典控制问题, 其基本环境由一个可在水平轨道上左右移动的小车和一根铰接在小车上的直杆组成. 杆的初始状态略有倾斜, 因此会因重力而自然倾倒. 我们的目标是通过控制小车的左右移动, 使杆保持竖直平衡状态尽可能长的时间, 要求杆与竖直方向的夹角不超过特定阈值, 同时小车不能超出轨道边界.
 
 #figure(
-  auto-div-frame(theme => cetz.canvas(
-    length: 2em,
-    {
-      import cetz.draw: *
+  auto-div-frame(theme => cetz.canvas(length: 2em, {
+    import cetz.draw: *
 
-      set-style(stroke: theme.main-color)
+    set-style(stroke: theme.main-color)
 
-      line((-2, 0.25), (2, 0.25))
-      circle((-0, 0.5), radius: 0.1)
+    line((-2, 0.25), (2, 0.25))
+    circle((-0, 0.5), radius: 0.1)
 
-      rect((-0.5, 0), (0.5, 0.5))
+    rect((-0.5, 0), (0.5, 0.5))
 
-      line((0, 0.5), (0, 2))
+    line((0, 0.5), (0, 2))
 
-      content((0, -0.4), "Cart")
-      content((0.7, 1.2), "Pole")
-    },
-  )),
+    content((0, -0.4), "Cart")
+    content((0.7, 1.2), "Pole")
+  })),
   caption: [车杆问题示意图],
 ) <fig-cart-pole>
 

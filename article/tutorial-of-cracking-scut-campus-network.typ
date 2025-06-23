@@ -106,7 +106,7 @@
 
 ===== 安装客户端
 
-请参考官方教程: [传送门](https://pkg.cloudflareclient.com/)
+请参考官方教程: #link("https://pkg.cloudflareclient.com/")[传送门]
 
 ===== 加入团队
 
@@ -376,9 +376,9 @@ Success
 
 = 最终测试
 
-国内测速站点: [传送门](https://test.ustc.edu.cn/)
+国内测速站点: #link("https://test.ustc.edu.cn/")[传送门])
 
-国外测速站点: [传送门](https://www.speedtest.net/)
+国外测速站点: #link("https://www.speedtest.net/")[传送门])
 
 = 总结
 

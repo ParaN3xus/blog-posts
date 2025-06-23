@@ -28,7 +28,7 @@
 
 == 解决方案
 
-在 community 中找到了相关的问题, 并找到了用户 snowball-rain 分享的解决方法, 原链接: ['The GitHub Student Developer Pack' was not verified in spite of my student ID is valid · community · Discussion =53463](https://github.com/orgs/community/discussions/53463)
+在 community 中找到了相关的问题, 并找到了用户 snowball-rain 分享的解决方法, 原链接: #link("https://github.com/orgs/community/discussions/53463")['The GitHub Student Developer Pack' was not verified in spite of my student ID is valid · community · Discussion =53463]
 
 具体的方法如下:
 
