@@ -14,16 +14,6 @@
   license: licenses.cc-by-nc-sa,
 )
 
-/*
-#show table: it => align(center, it)
-#show table: block.with(width: 100%)
-*/
-
-#show math.equation.where(block: true): if is-pdf-target {
-  block.with(width: 100%)
-} else {
-  x => x
-}
 
 #let (problem-counter, problem-box, problem, show-problem) = make-frame(
   "problem",
@@ -46,8 +36,11 @@
 #show: show-problem
 #show: show-solution
 
-#show: x => if is-pdf-target {
+#show: x => context if shiroa-sys-target() == "paged" {
   set page(numbering: "1")
+  show table: it => align(center, it)
+  show table: block.with(width: 100%)
+  show math.equation: block.with(width: 100%)
   x
 } else {
   x
@@ -63,7 +56,7 @@
 #let bit = "bit"
 #let bits = "bits"
 
-#if is-pdf-target {
+#context if shiroa-sys-target() == "paged" {
   outline(depth: 2)
 }
 
