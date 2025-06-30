@@ -1147,7 +1147,7 @@ $
 - 快速重传和恢复阶段: 如果只有个别数据丢失(比如三次重复确认), 就立即重传, 把阈值设置为窗口的一半, 窗口设置为新的阈值, 然后进入拥塞避免阶段
 
 #let struc-table(width: auto, height: 2em, info: none, body) = {
-  theme-frame(theme => {
+  auto-div-frame(theme => {
     stack(dir: ttb, box(height: 1.5em, info), ..body
       .split(none)
       .map(x => stack(dir: ltr, ..x.map(x => {
