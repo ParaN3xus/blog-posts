@@ -276,4 +276,4 @@ ExternVRCEconomyIProduct.__get_Name__SystemString
 - `COPY`: 从栈中先后弹出 `TARGET` 和 `SOURCE` 两个地址, 然后把堆中 `TARGET` 地址指向的值使用 `SOURCE` 地址指向的值覆盖. 所在 PC 步进 4 字节
 
 = 反编译
-在网络上找到了开源的#link("https://github.com/UdonSharpRE/UdonSharpDecompiler")[反汇编器]和#link("https://github.com/extremeblackliu/UdonSharpDisassembler")[反编译器]. 但是这两个实现都过于初级, 能做的明显还有很多. 如果没有意外, 我会在最近(或许不是)实现一个更好的反编译器.
+用 Claude 写了一个#link("https://github.com/ParaN3xus/udon-decompiler")[反编译器]. 比之前的#link("https://github.com/UdonSharpRE/UdonSharpDecompiler")[反汇编器]和#link("https://github.com/extremeblackliu/UdonSharpDisassembler")[反编译器]效果好一些, 但是能做的还有很多.
