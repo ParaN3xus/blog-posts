@@ -40,7 +40,7 @@ Worker 的名字可以随便填写, 然后点击 "Deploy".
 
 点击 "Edit code" 进入编辑器, 全选粘贴以下代码
 
-``` javascript
+```javascript
 var URL_PATH_REGEX = /^\/bot(?<bot_token>[^/]+)\/(?<api_method>[a-z]+)/i;
 
 var src_default = {
