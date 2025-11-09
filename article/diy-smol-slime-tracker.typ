@@ -336,10 +336,10 @@
     *** Booting SlimeVR-Tracker-nRF-Receiver v0.6.9-c0c2784b78b0 ***
     *** Using nRF Connect SDK v3.1.1-cb47ad580360 ***
     *** Using Zephyr OS v4.1.99-ff8f0c579eeb ***
-    [00:00:00.000,305] [0m<inf> hid_event: HID Device: dev 0x1854c[0m
-    [00:00:00.006,988] [0m<inf> esb_event: 10/256 devices stored[0m
-    [00:00:00.007,019] [0m<inf> esb_event: Initializing ESB, RX mode[0m
-    [00:00:00.109,283] [0m<inf> hid_event: New protocol: report[0m
+    [00:00:00.000,305] <inf> hid_event: HID Device: dev 0x1854c
+    [00:00:00.006,988] <inf> esb_event: 10/256 devices stored
+    [00:00:00.007,019] <inf> esb_event: Initializing ESB, RX mode
+    [00:00:00.109,283] <inf> hid_event: New protocol: report
     *** Holyiot SlimeNRF Receiver Holyiot-21017 ***
     SlimeVR-Tracker-nRF-Receiver 0.6.9+0 (Commit c0c2784b78b0, Build 2025-11-05 02:23:01)
     info                         Get device information
@@ -359,12 +359,12 @@
     + 连接一个 tracker 到电脑, 刷新另一个 SmolSlimeConfigurator 实例的 COM 接口列表, 应该能看到 tracker 对应的 COM 接口. 选中该接口, 点击连接, 能看到类似如下输出
       ```sh
       Connected to COM23
-      [19:58:33.350,463] [0m<inf> status: USB connected[0m
-      [19:58:33.350,494] [0m<inf> status: Status: 8[0m
-      [19:58:33.406,372] [0m<inf> status: Charger plugged[0m
-      [19:58:33.406,372] [0m<inf> status: Status: 24[0m
-      [19:58:33.406,402] [0m<inf> power: Change to battery SOC: 26.55% -> 100.00%[0m
-      [19:58:33.406,433] [0m<inf> battery_tracker: Tracker reset[0m
+      [19:58:33.350,463] <inf> status: USB connected
+      [19:58:33.350,494] <inf> status: Status: 8
+      [19:58:33.406,372] <inf> status: Charger plugged
+      [19:58:33.406,372] <inf> status: Status: 24
+      [19:58:33.406,402] <inf> power: Change to battery SOC: 26.55% -> 100.00%
+      [19:58:33.406,433] <inf> battery_tracker: Tracker reset
       *** SlimeVR SlimeNRF Tracker ProMicro ***
       SlimeVR-Tracker-nRF 0.6.9+0 (Commit 5d572a0056f3, Build 2025-11-05 02:26:37)
       info                         Get device information
@@ -407,19 +407,19 @@
       此处我已经配对过, 所以 `Receiver address` 有显示. 这里重点关注 `Device address`.
     + 使用接收器对应的 SmolSlimeConfigurator 实例使接收器进入配对模式, 然后长按 tracker 的按钮至少三秒, 在 tracker 对应的 SmolSlimeConfigurator 实例中应该看到类似如下的输出
       ```sh
-      [20:02:28.176,422] [0m<inf> status: Button pressed[0m
-      [20:02:28.176,452] [0m<inf> status: Status: 90[0m
-      [20:02:29.144,592] [0m<inf> system: User shutdown requested[0m
-      [20:02:32.333,129] [0m<inf> status: Cleared status: 2[0m
-      [20:02:32.333,160] [0m<inf> status: Status: 88[0m
-      [20:02:33.145,111] [0m<inf> system: Pairing requested[0m
-      [20:02:33.155,303] [0m<inf> esb_event: Pairing requested[0m
-      [20:02:33.155,334] [0m<inf> status: Cleared status: 64[0m
-      [20:02:33.155,334] [0m<inf> status: Status: 24[0m
-      [20:02:33.234,619] [0m<inf> esb_event: Pairing[0m
-      [20:02:33.234,710] [0m<inf> esb_event: Device address: A3ABE2433796[0m
-      [20:02:33.234,710] [0m<inf> esb_event: Checksum: 72[0m
-      [20:02:34.235,565] [0m<inf> esb_event: Paired[0m
+      [20:02:28.176,422] <inf> status: Button pressed
+      [20:02:28.176,452] <inf> status: Status: 90
+      [20:02:29.144,592] <inf> system: User shutdown requested
+      [20:02:32.333,129] <inf> status: Cleared status: 2
+      [20:02:32.333,160] <inf> status: Status: 88
+      [20:02:33.145,111] <inf> system: Pairing requested
+      [20:02:33.155,303] <inf> esb_event: Pairing requested
+      [20:02:33.155,334] <inf> status: Cleared status: 64
+      [20:02:33.155,334] <inf> status: Status: 24
+      [20:02:33.234,619] <inf> esb_event: Pairing
+      [20:02:33.234,710] <inf> esb_event: Device address: A3ABE2433796
+      [20:02:33.234,710] <inf> esb_event: Checksum: 72
+      [20:02:34.235,565] <inf> esb_event: Paired
       ```
       这里看到 `Paired` 即可松手.
     + 在接收器对应的 SmolSlimeConfigurator 实例点击 "List", 应该能看到类似如下输出
