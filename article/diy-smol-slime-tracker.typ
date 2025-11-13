@@ -41,7 +41,7 @@
     ([焊锡丝], 0, 0, [买电烙铁送的]),
     ([两米长三厘米宽松紧带], 3, 13.12, []),
     ([1007电子线5卷共100米], 1, 36.45, [明显买多了]),
-    ([子母扣], 10, 2.97, []),
+    ([子母扣], 9, 2.97, []),
   ),
   电子元件: (
     ([KEY SMD小乌龟轻触开关], 10, 0.48, []),
@@ -60,7 +60,9 @@
     ([十口 USB 分线器], 1, 26, []),
     ([USB-C 公口对 USB-A 公口转换器], 10, 5.95, []),
     ([GoPro 用双肩胸带], 1, 15.3, [挂接胸部tracker用]),
-    ([3D 打印外壳], 10, 6.68, []),
+    ([3D 打印外壳], 10, 3.54, []),
+    ([3D 打印挂载托盘], 9, 1.91, []),
+    ([3D 打印 GoPro 胸带挂载托盘], 1, 2.11, []),
   ),
 )
 
@@ -96,14 +98,17 @@
   [],
   [],
   strong(str(
-    costs
-      .values()
-      .map(x => x.map(x => {
-        let (_, c, p, _) = x
-        c * p
-      }))
-      .flatten()
-      .sum(),
+    calc.round(
+      costs
+        .values()
+        .map(x => x.map(x => {
+          let (_, c, p, _) = x
+          c * p
+        }))
+        .flatten()
+        .sum(),
+      digits: 2,
+    ),
   )),
 )
 
@@ -448,9 +453,9 @@
 
 == 组装 tracker 与外壳, 绑带
 
-我的外壳参考的是 #link("https://www.thingiverse.com/LyallRivanUlric")[LyallUlric] 设计的 #link("https://www.thingiverse.com/thing:6941615")[堆叠式 SmolSlime 外壳], 绑带参考的是 Depact 设计的 #link("https://docs.slimevr.dev/smol-slimes/hardware/smol-slimes-community-straps.html#depact-v2-smol-strap")[Depact V2 Smol 绑带].
+我的外壳参考的是 #link("tbd")[tbd] 设计的 #link("tbd")[tbd], 绑带参考的是 Depact 设计的 #link("https://docs.slimevr.dev/smol-slimes/hardware/smol-slimes-community-straps.html#depact-v2-smol-strap")[Depact V2 Smol 绑带].
 
-+ 下载外壳的 #link("https://www.thingiverse.com/thing:6941615")[3D 模型文件], 这里我们需要的是 `LRCUShell.stl`, `CONRI_TRAY.stl`, `LRCULid.stl` 三个模型, 每个模型打印十个即可.
++ 下载外壳的 #link("tbd")[3D 模型文件], 这里我们需要的是 `tbd`, `tbd`, `tbd` 三个模型, 每个模型打印十个即可.
 + tbd
 
 == 调试, 测试
