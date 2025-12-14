@@ -13,6 +13,8 @@
   license: licenses.cc-by-nc-sa,
 )
 
+*本教程尚未完成, 但本人的 Tracker 已经 DIY 完成. 本教程的成本部分是准确的.*
+
 一直很羡慕能在游戏里随便摆 Pose 的好友们, 但是我没钱, 买不起成品 tracker, 又不会焊接, 所以没法 DIY 史莱姆.
 
 今年早些看了一个 #link("https://www.bilibili.com/video/BV19BaYz7EPV")[Bilibili 视频]介绍的#link("https://docs.slimevr.dev/smol-slimes/")[小史莱姆(Smol Slime)], 狠狠心动了. 正好这学期学校有一整周的实训课程教我们怎么焊接电路板(一周前我还对焊接一无所知, 现在也只是焊接新手), 那就趁这个机会试试吧.
@@ -35,13 +37,15 @@
     ([定制 SMT 激光钢网 10cm\*10cm], 1, 15, []),
     ([优利德万用表 UT33A+], 1, 82.78, [最低要求是能测电阻]),
     ([迷你锡膏印刷台], 1, 25.8, [闲鱼]),
+    ([针线], 1, 0, [家中常备]),
+    ([打火机], 1, 0, [家中常备]),
   ),
   材料: (
     ([凯利顺锡浆 50克], 1, 25.5, []),
     ([焊锡丝], 0, 0, [买电烙铁送的]),
-    ([两米长三厘米宽松紧带], 3, 13.12, []),
+    ([两米长三厘米宽松紧带], 3, 13.12, [剩了不少]),
     ([1007电子线5卷共100米], 1, 36.45, [明显买多了]),
-    ([子母扣], 10, 2.97, []),
+    ([子母扣], 9, 2.97, []),
   ),
   电子元件: (
     ([KEY SMD小乌龟轻触开关], 10, 0.48, []),
@@ -60,7 +64,9 @@
     ([十口 USB 分线器], 1, 26, []),
     ([USB-C 公口对 USB-A 公口转换器], 10, 5.95, []),
     ([GoPro 用双肩胸带], 1, 15.3, [挂接胸部tracker用]),
-    ([3D 打印外壳], 10, 6.68, []),
+    ([3D 打印外壳], 10, 1.84 + 2.41, []),
+    ([3D 打印托盘], 9, 2.17, []),
+    ([3D 打印 GoPro 胸带挂载托盘], 1, 6.03, []),
   ),
 )
 
@@ -96,18 +102,21 @@
   [],
   [],
   strong(str(
-    costs
-      .values()
-      .map(x => x.map(x => {
-        let (_, c, p, _) = x
-        c * p
-      }))
-      .flatten()
-      .sum(),
+    calc.round(
+      costs
+        .values()
+        .map(x => x.map(x => {
+          let (_, c, p, _) = x
+          c * p
+        }))
+        .flatten()
+        .sum(),
+      digits: 2,
+    ),
   )),
 )
 
-前面提到的视频中的商品 Styria Mini tracker 十点的价格是 1888. 虽然没有触点充电, 一键唤醒等功能, 但价格便宜 700 多元(甚至还留下了价值 300 多元的不动产)让我感到满意.
+前面提到的视频中的商品 Styria Mini tracker 十点的价格是 1888. 虽然没有触点充电, 一键唤醒等功能, 但价格便宜 700 多元(甚至还留下了价值 300 多元未来还可以继续用的工具)让我感到满意.
 
 如果你决定要跟随本教程制作 tracker, 建议先通读一遍本教程, 明确自己需要准备什么工具或材料, 然后再进行准备和实操.
 
@@ -448,9 +457,9 @@
 
 == 组装 tracker 与外壳, 绑带
 
-我的外壳参考的是 #link("https://www.thingiverse.com/LyallRivanUlric")[LyallUlric] 设计的 #link("https://www.thingiverse.com/thing:6941615")[堆叠式 SmolSlime 外壳], 绑带参考的是 Depact 设计的 #link("https://docs.slimevr.dev/smol-slimes/hardware/smol-slimes-community-straps.html#depact-v2-smol-strap")[Depact V2 Smol 绑带].
+我的外壳参考的是 #link("https://github.com/brisfknibis")[Bris Ibis] 设计的 #link("https://github.com/brisfknibis/ibis-trackers/tree/main/3D%20Print%20Models/Tracker%20V1")[Ibis Trackers V1], 在#link("https://space.bilibili.com/670121708")[凌橙]的帮助下进行了修改, 绑带参考的是 Depact 设计的 #link("https://docs.slimevr.dev/smol-slimes/hardware/smol-slimes-community-straps.html#depact-v2-smol-strap")[Depact V2 Smol 绑带].
 
-+ 下载外壳的 #link("https://www.thingiverse.com/thing:6941615")[3D 模型文件], 这里我们需要的是 `LRCUShell.stl`, `CONRI_TRAY.stl`, `LRCULid.stl` 三个模型, 每个模型打印十个即可.
++ 下载外壳的 #link("https://github.com/ParaN3xus/paran3xus_smol_slime/tree/main/mechanical")[3D 模型文件], 这里我们需要的是 10 个 `Body.stl`, 10 个 `Lid.stl`, 9 个 `Tray.stl`, 1 个 `GoPro Chest Mount.stl`.
 + tbd
 
 == 调试, 测试
