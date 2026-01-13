@@ -17,35 +17,38 @@
 
 一直很羡慕能在游戏里随便摆 Pose 的好友们, 但是我没钱, 买不起成品 tracker, 又不会焊接, 所以没法 DIY 史莱姆.
 
-今年早些看了一个 #link("https://www.bilibili.com/video/BV19BaYz7EPV")[Bilibili 视频]介绍的#link("https://docs.slimevr.dev/smol-slimes/")[小史莱姆(Smol Slime)], 狠狠心动了. 正好这学期学校有一整周的实训课程教我们怎么焊接电路板(一周前我还对焊接一无所知, 现在也只是焊接新手), 那就趁这个机会试试吧.
+今年早些看了一个 #link("https://www.bilibili.com/video/BV19BaYz7EPV")[Bilibili 视频]介绍的#link("https://docs.slimevr.dev/smol-slimes/")[小史莱姆(Smol Slime)], 狠狠心动了. 正好这学期学校有一整周的实训课程教我们怎么焊接电路板(是的, 本项目开始一周前我还对焊接一无所知. 当然, 我现在也只是焊接新手), 那就趁这个机会试试吧.
 
 = 成果
 
 - 数量: 十点
 - 电池: 120 mAh, 提供约 24h 续航
-- 尺寸: tbd, 但是十分小巧轻薄
-- 追踪效果: tbd
+- 尺寸: 3.8 #sym.times 3.7 #sym.times 1.0
+-
+
+: tbd
 
 = 成本
 
 #let costs = (
   工具: (
-    ([黄花电烙铁 EP-916L], 1, 115, [趁手即可]),
-    ([卡诺宇恒温加热台 1010], 1, 73.01, [趁手即可]),
-    ([得力水口钳], 1, 13.5, [剪去多余的排针用, 趁手即可]),
+    ([电烙铁], 1, 115, [趁手即可]),
+    ([恒温加热台], 1, 73.01, [趁手即可]),
+    ([水口钳], 1, 13.5, [剪去多余的排针用, 趁手即可]),
     ([镊子套装], 1, 18, [主要是 SMT 贴片时夹取和放置元件用, 趁手即可]),
     ([定制 SMT 激光钢网 10cm\*10cm], 1, 15, []),
-    ([优利德万用表 UT33A+], 1, 82.78, [最低要求是能测电阻]),
+    ([万用表], 1, 82.78, [最低要求是能测电阻]),
     ([迷你锡膏印刷台], 1, 25.8, [闲鱼]),
     ([针线], 1, 0, [家中常备]),
     ([打火机], 1, 0, [家中常备]),
   ),
   材料: (
-    ([凯利顺锡浆 50克], 1, 25.5, []),
+    ([锡浆], 1, 25.5, []),
     ([焊锡丝], 0, 0, [买电烙铁送的]),
     ([两米长三厘米宽松紧带], 3, 13.12, [剩了不少]),
     ([1007电子线5卷共100米], 1, 36.45, [明显买多了]),
     ([子母扣], 9, 2.97, []),
+    ([标签纸], 1, 5, [买多了]),
   ),
   电子元件: (
     ([KEY SMD小乌龟轻触开关], 10, 0.48, []),
@@ -116,7 +119,7 @@
   )),
 )
 
-前面提到的视频中的商品 Styria Mini tracker 十点的价格是 1888. 虽然没有触点充电, 一键唤醒等功能, 但价格便宜 700 多元(甚至还留下了价值 300 多元未来还可以继续用的工具)让我感到满意.
+前面提到的视频中的商品 Styria Mini tracker 十点的价格是 1888. 虽然没有触点充电, 一键唤醒等功能, 但价格便宜约 700 元(甚至还留下了价值 300 多元未来还可以继续用的工具)让我感到满意.
 
 如果你决定要跟随本教程制作 tracker, 建议先通读一遍本教程, 明确自己需要准备什么工具或材料, 然后再进行准备和实操.
 
@@ -457,10 +460,70 @@
 
 == 组装 tracker 与外壳, 绑带
 
-我的外壳参考的是 #link("https://github.com/brisfknibis")[Bris Ibis] 设计的 #link("https://github.com/brisfknibis/ibis-trackers/tree/main/3D%20Print%20Models/Tracker%20V1")[Ibis Trackers V1], 在#link("https://space.bilibili.com/670121708")[凌橙]的帮助下进行了修改, 绑带参考的是 Depact 设计的 #link("https://docs.slimevr.dev/smol-slimes/hardware/smol-slimes-community-straps.html#depact-v2-smol-strap")[Depact V2 Smol 绑带].
+我的外壳参考的是 #link("https://github.com/brisfknibis")[Bris Ibis] 设计的 #link("https://github.com/brisfknibis/ibis-trackers/tree/main/3D%20Print%20Models/Tracker%20V1")[Ibis Trackers V1], 在#link("https://space.bilibili.com/670121708")[凌橙]的帮助下进行了修改.
 
-+ 下载外壳的 #link("https://github.com/ParaN3xus/paran3xus_smol_slime/tree/main/mechanical")[3D 模型文件], 这里我们需要的是 10 个 `Body.stl`, 10 个 `Lid.stl`, 9 个 `Tray.stl`, 1 个 `GoPro Chest Mount.stl`.
-+ tbd
+=== 组装 tracker 和外壳
++ 下载外壳的 #link("https://github.com/ParaN3xus/paran3xus_smol_slime/tree/main/mechanical")[3D 模型文件]并打印, 这里我们需要打印 10 个 `Body.stl`, 10 个 `Lid.stl`, 9 个 `Tray.stl`, 1 个 `GoPro Chest Mount.stl`.
++ 按图示方式组装追踪器和外壳. 建议先安装 PCB 部分再安装电池部分. 安装时注意方向(可以通过外壳上为 USB-C 接口预留的空缺确定).
+  #figure(
+    image(
+      "assets/diy-smol-slime-tracker/shell_installed.jpg",
+      width: 50%,
+    ),
+    caption: [tracker 在外壳中],
+  )
++ 安装外壳的盖子
+  #figure(
+    image(
+      "assets/diy-smol-slime-tracker/shell_enclosed.jpg",
+      width: 50%,
+    ),
+    caption: [tracker(已封顶)],
+  )
++ 将 tracker 安装到挂载托盘上
+  #figure(
+    grid(
+      columns: 2,
+      column-gutter: 2em,
+      image(
+        "assets/diy-smol-slime-tracker/shell_mounted_to_gopro_mounter.jpg",
+        height: 20em,
+      ),
+      image(
+        "assets/diy-smol-slime-tracker/shell_mounted.jpg",
+        height: 20em,
+      ),
+    ),
+    caption: [已挂载的 tracker],
+  )
++ 为 tracker 贴上标签
+  #figure(
+    image(
+      "assets/diy-smol-slime-tracker/tracker_labeled.jpg",
+      width: 50%,
+    ),
+    caption: [贴好标签的 tracker],
+  )
+=== 制作和组装绑带
+
+我使用的绑带设计是 Depact 设计的 #link("https://docs.slimevr.dev/smol-slimes/hardware/smol-slimes-community-straps.html#depact-v2-smol-strap")[Depact V2 Smol 绑带]. 由于本人完全不懂缝纫, 且撰写该教程时本人已忘记一些缝纫操作的细节, 所以本节教程可能不够详细.
+
++ 学习基础缝纫步骤. 此处有一个#link("https://docs.slimevr.dev/smol-slimes/hardware/smol-slimes-community-straps.html")[官方文档相关章节]给出的#link("https://www.wikihow.com/Sew")[基础缝纫教程], 能让你学会将两块布缝纫在一起. 这是完成本节所有步骤所需要掌握的唯一缝纫步骤.
++ *对于接下来的步骤, 建议先对一个 tracker 完整完成, 再进行批量制作, 以获取经验和调整后续操作细节*.
++ 制作固定环
+  + 剪下一段长度略短于三倍松紧带宽度的松紧带, 并用打火机快速烤一下两端防止今后开线. 在不影响环绕绑带的基础上, 环越短, 固定时越紧, 绑带的固定效果越好. 一个可供参考的长度是短 1cm, 也即使用 8cm 长的松紧带制作环.
+  + 令带有防滑条纹的一面朝内, 将松紧带卷起至重叠三次, 此时松紧带卷的长度应与松紧带本身的宽度相当(或略短).
+  + 缝合松紧带卷外面裸露的头部和最外层下的一层(也即次外层), 制作成固定环. 由于涉及固定和尺寸问题, 这一步可能略难. 可以多次尝试.
++ 对于身体每个要使用绑带安装的部位(足部, 脚踝, 大腿, 腰部, 大臂), 使用你所购买的松紧带量出环绕该部位一周需要的长度, 剪下比该长度长 10cm 的松紧带作为绑带, 并用打火机快速烤一下两端防止今后开线. 此处的 10cm 是作者本人认为合适的经验长度, 可根据你的个人需要进行调整. 如果不放心, 可以继续加长, 毕竟后续可以进行修剪.
++ 按图示方式组装追踪器, 绑带, 子母扣和固定环. 图中蓝色标注了绑带带有防滑条纹的一面. 注意图中只有右侧的绑带和子母扣连接处需要缝纫固定, 左侧是完全依靠固定环的弹力和防滑条纹的摩擦固定的. 注意在左侧穿入子母扣之前就应该套上固定环.
+  #figure(
+    image(
+      "assets/diy-smol-slime-tracker/tracker_on_strap.jpg",
+      width: 50%,
+    ),
+    caption: [tracker 在绑带上],
+  )
++ 在追踪器的标签上写上对应身体部位的名字. 建议留一些位置用于记录其他信息, 如 tracker 的硬件地址.
 
 == 调试, 测试
 tbd
