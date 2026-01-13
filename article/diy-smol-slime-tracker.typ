@@ -482,7 +482,8 @@
   )
 + 将 tracker 安装到挂载托盘上
   #figure(
-    grid(
+    table(
+      stroke: none,
       columns: 2,
       column-gutter: 2em,
       image(
