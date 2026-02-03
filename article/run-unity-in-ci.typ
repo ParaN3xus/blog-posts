@@ -13,7 +13,7 @@
 
 方法来自 #link("https://github.com/game-ci/documentation/issues/408#issuecomment-3211109962")[game-ci/documentation/issue/408] 中 #link("https://github.com/GabLeRoux")[\@GabLeRoux] 的评论.
 
-== 获取个人证书
+= 获取个人证书
 + Unity Hub → Preferences → Licenses → Add
 + 即使你已经有证书了, 也要 Add 一个新的证书
 + 找到 `.ulf` 文件
@@ -21,7 +21,7 @@
   - MacOS: `/Library/Application Support/Unity/Unity_lic.ulf`
   - Linux: `~/.local/share/unity3d/Unity/Unity_lic.ulf`
 
-== 获取序列号
+= 获取序列号
 Shell:
 ```sh
 cat Unity_lic.ulf | grep DeveloperData | sed -E 's/.*Value="([^"]+)".*/\1/' | base64 --decode
@@ -32,7 +32,7 @@ PowerShell:
 Get-Content Unity_lic.ulf | Select-String -Pattern 'DeveloperData' | ForEach-Object { $_ -replace '.*Value="([^"]+)".*', '$1' } | [System.Convert]::FromBase64String($_)
 ```
 
-== 在 CI 中运行 Unity
+= 在 CI 中运行 Unity
 ```yaml
 jobs:
   build:
