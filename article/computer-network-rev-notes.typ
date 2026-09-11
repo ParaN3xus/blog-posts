@@ -1247,15 +1247,19 @@ $
 
 #let struc-table(width: auto, height: 2em, info: none, body) = {
   auto-div-frame(theme => {
-    stack(dir: ttb, box(height: 1.5em, info), ..body
-      .split(none)
-      .map(x => stack(dir: ltr, ..x.map(x => {
-        let (len, body) = x
-        box(width: len * width, height: height, stroke: 1pt + theme.main-color, align(center + horizon, {
-          set text(cjk-latin-spacing: none)
-          body
-        }))
-      }))))
+    stack(
+      dir: ttb,
+      box(height: 1.5em, info),
+      ..body
+        .split(none)
+        .map(x => stack(dir: ltr, ..x.map(x => {
+          let (len, body) = x
+          box(width: len * width, height: height, stroke: 1pt + theme.main-color, align(center + horizon, {
+            set text(cjk-latin-spacing: none)
+            body
+          }))
+        }))),
+    )
   })
 }
 
