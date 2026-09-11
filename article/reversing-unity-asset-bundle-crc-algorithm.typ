@@ -23,7 +23,7 @@
 
 那么, 如何计算任意 AssetBundle 的 CRC 呢?
 
-Unity 提供了 API `BuildPipeline.GetCRCForAssetBundle`, 但别被它的名字迷惑了. 实际上它只是读取穿入 AssetBundle 同目录下的 manifest 文件, 并从 manifest 文件中读取构建时预计算的 CRC 值. 如果不存在 manifest 文件, 这个函数什么都做不了.
+Unity 提供了 API `BuildPipeline.GetCRCForAssetBundle`, 但别被它的名字迷惑了. 实际上它只是读取 AssetBundle 同目录下的 manifest 文件, 并从 manifest 文件中读取构建时预计算的 CRC 值. 如果不存在 manifest 文件, 这个函数什么都做不了.
 
 事实是 Unity 官方并没有给出任何从 AssetBundle 文件计算 CRC 的公共 API (事实上, 经过反编译, 我其实发现私有 API 也没有). 而且这个 CRC 也并不是直接在 AssetBundle 文件上计算 CRC, 因为官方在 #link("https://docs.unity3d.com/6000.5/Documentation/Manual/AssetBundles-Integrity.html")[文档] 中声称
 ```
