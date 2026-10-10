@@ -145,7 +145,7 @@ cloudflared --config cloudflared.yml tunnel run
 
 == 播放
 
-- 本地测试: http://127.0.0.1:8888
-- VRChat 外播放测试: https://live.example.com/live/index.m3u8
+- 本地测试: http://127.0.0.1:8888/live
+- VRChat 外播放测试: https://live.example.com/live
 - VRChat 内播放: https://live.example.com/live/index.m3u8?cookieCheck=1
 
