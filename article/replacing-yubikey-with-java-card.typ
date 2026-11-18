@@ -130,7 +130,7 @@ sudo systemctl enable --now pcscd.socket
 - 对于 Linux 用户: 可以使用 #gh-repo("https://github.com/neroduality/pcsc-fido/") 将接触式读卡器转为 USB HID 设备
 - 对于 WSL 用户: 可以参照 #link("https://learn.microsoft.com/en-us/windows/wsl/connect-usb")[教程] 使用 usbipd 将接触式读卡器转发至 WSL 内. 配置阶段不需要中间件, 实际上你也没有中间件可以安装. 使用时, 受此影响, 你无法使用 WebAuthn
 
-=== 使用 #gh-repo("https://github.com/frankmorgner/vsmartcard") 转发 Android 手机的 NFC <sect-android-as-a-nfc-reader>
+=== 使用 vsmartcard 转发 Android 手机的 NFC <sect-android-as-a-nfc-reader>
 
 在 Android 手机上安装 #link("https://f-droid.org/packages/com.vsmartcard.remotesmartcardreader.app/")[Smart Card Reader]. 然后参考 #link("https://frankmorgner.github.io/vsmartcard/virtualsmartcard/README.html#installation")[vsmartcard 文档] 的指引在 PC 上安装 vpcd.
 
