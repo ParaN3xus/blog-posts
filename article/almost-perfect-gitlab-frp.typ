@@ -1,4 +1,5 @@
 #import "/typ/templates/blog.typ": *
+#import "/typ/utils.typ": gh-repo
 
 #show: main.with(
   title: "近乎完美的 GitLab + frp 搭建踩坑",
@@ -181,7 +182,7 @@ frpc -c gitlab.toml
 sudo bash -c 'echo | openssl s_client -connect localhost:10002 -servername gitlab.example.com 2>/dev/null | openssl x509 > /etc/nginx/ssl/gitlab_cert.pem'
 ```
 
-此外, 我们还需要使用 #link("https://github.com/acmesh-official/acme.sh")[acme.sh] 申请证书, 遵从其官方指引即可, 这里不再赘述.
+此外, 我们还需要使用 #gh-repo("https://github.com/acmesh-official/acme.sh") 申请证书, 遵从其官方指引即可, 这里不再赘述.
 
 这里给出一个 `/etc/nginx/conf.d/gitlab.conf` 的参考配置, 具体可以根据实际情况再修改:
 ```conf

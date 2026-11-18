@@ -1,4 +1,5 @@
 #import "/typ/templates/blog.typ": *
+#import "/typ/utils.typ": gh-repo
 
 #show: main.with(
   title: "用 Java Card 平替 YubiKey",
@@ -17,19 +18,6 @@
 常见的 YubiKey 5 系列产品很贵. 其中的 "标准款" YubiKey 5C NFC 在#link("https://www.yubico.com/product/yubikey-5-series/yubikey-5c-nfc/")[官网]上的价格为 58 USD, 也即约 390 CNY. 在国内电商平台的价格往往大于 600 CNY.
 
 YubiKey 5C NFC 有诸多功能, 然而其中的很多都可以通过在特定智能卡上运行的 Java Card Applet 实现, 如下表.
-
-#let gh-repo(url, user: false) = {
-  link(
-    url,
-    url
-      .split("/")
-      .filter(x => x.trim() != "")
-      .slice(
-        -1 + if user { -1 },
-      )
-      .join("/"),
-  )
-}
 
 #figure(
   table(

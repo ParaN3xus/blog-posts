@@ -1,4 +1,5 @@
 #import "/typ/templates/blog.typ": *
+#import "/typ/utils.typ": gh-repo
 
 #show: main.with(
   title: "Unity AssetBundle CRC 算法逆向",
@@ -267,7 +268,7 @@ v31 = Format(
 
 = 重新实现
 
-基于上述信息, 为 #link("https://github.com/nesrak1/AssetsTools.NET")[AssetsTools.NET] 包实现了计算 AssetBundle CRC 的功能: https://github.com/nesrak1/AssetsTools.NET/pull/157
+基于上述信息, 为 #gh-repo("https://github.com/nesrak1/AssetsTools.NET") 包实现了计算 AssetBundle CRC 的功能: https://github.com/nesrak1/AssetsTools.NET/pull/157
 
 用法:
 ```cs

@@ -1,4 +1,5 @@
 #import "/typ/templates/blog.typ": *
+#import "/typ/utils.typ": gh-repo
 
 #show: main.with(
   title: "在 VRChat 中直播",
@@ -22,7 +23,7 @@
 
 所以他必须通过直播的方式, 然而
 - 因为电影是有版权的, 他不能直接在 YouTube / Bilibili 上直播, 因为直播间会被封禁
-- 在尝试 #link("https://github.com/TopazChat/TopazChat")[TopazChat] 这个方案时, 他失败了. 可能原因是与服务器的连接不稳定, 或者特定世界不支持这种方式 (TopazChat 要求世界进行针对性适配才能播放直播)
+- 在尝试 #gh-repo("https://github.com/TopazChat/TopazChat") 这个方案时, 他失败了. 可能原因是与服务器的连接不稳定, 或者特定世界不支持这种方式 (TopazChat 要求世界进行针对性适配才能播放直播)
   - 我个人也不喜欢这个方案
 
 所以我尝试找出了一种新的方法来私域直播, 且

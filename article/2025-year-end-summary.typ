@@ -1,4 +1,5 @@
 #import "/typ/templates/blog.typ": *
+#import "/typ/utils.typ": gh-repo, gh-user
 
 #show: main.with(
   title: "2025 年终总结",
@@ -33,7 +34,7 @@
 - 里面有一个很有意思的需求: 计算科研人员合作关系的图中的各阶完全子图个数. 这是一个著名的 NP 完全问题, 最终我#link("https://github.com/ParaN3xus/litman/tree/main/backend/pivoter")[抄]了 #link("https://dl.acm.org/doi/10.1145/3336191.3371839")[Pivoter] 算法, 并且因此写了一篇 #link("https://blog.paran3x.us/article/pivoter-for-exact-clique-counting/")[Blog].
 
 = #link("https://github.com/ParaN3xus/blog")[Blog]
-#link("https://github.com/Myriad-Dreamin/")[Myriad-Dreamin] 用 #link("https://github.com/OverflowCat/astro-typst")[astro-typst] 做了一个 Blog, 看得我手痒痒, 然后就有了现在这个 Blog.
+#gh-user("https://github.com/Myriad-Dreamin/") 用 #gh-repo("https://github.com/OverflowCat/astro-typst") 做了一个 Blog, 看得我手痒痒, 然后就有了现在这个 Blog.
 
 其实我本来有继续重构 Blog 的计划, 但是一直被推迟, 或许 2026 年会完成, 这里可以写一下 todo
 - [ ] 完全分离模板和内容: 模板应当是公共的仓库, 内容仓库应该负责构建和部署 Blog
@@ -43,9 +44,9 @@
 
 
 = #link("https://github.com/ParaN3xus/tinymist/tree/tinymist-wasm")[Tinymist WASM]
-最开始 #link("https://github.com/Myriad-Dreamin/")[Myriad-Dreamin] 问我要不要做的时候我还拒绝了( 然而后来还是做了一些.
+最开始 #gh-user("https://github.com/Myriad-Dreamin/") 问我要不要做的时候我还拒绝了( 然而后来还是做了一些.
 
-基本上就是让 Tinymist 能运行在浏览器里, 目前除了 debugger 部分都能正常工作, 还做了一个 playground(原名), 后来和官方撞了于是改为 #link("https://github.com/ParaN3xus/tyraria")[tyraria]. 目前还有一些 Bug, 不过总体工作良好.
+基本上就是让 Tinymist 能运行在浏览器里, 目前除了 debugger 部分都能正常工作, 还做了一个 playground(原名), 后来和官方撞了于是改为 #gh-repo("https://github.com/ParaN3xus/tyraria"). 目前还有一些 Bug, 不过总体工作良好.
 
 目前还有很多重要功能没有合入主线 Tinymist. 这可能是 2026 年的一项重要目标.
 
@@ -53,17 +54,17 @@
 
 赞美 WASM.
 
-可以让你在官方 Web App 上使用 #link("https://github.com/typstyle-rs/typstyle")[typstyle] 格式化代码. 这是巨大的幸福感提升.
+可以让你在官方 Web App 上使用 #gh-repo("https://github.com/typstyle-rs/typstyle") 格式化代码. 这是巨大的幸福感提升.
 
 我的工作只是写了一些 hook, WASM 构建工作是 typstyle 官方完成的.
 
-= #link("https://github.com/ParaN3xus/vdshortcut")[vdshortcut]
+= #gh-repo("https://github.com/ParaN3xus/vdshortcut")
 
 我对 Hyprland 又爱又恨, 表现在我放弃 Hyprland 切换到 Windows 后还是念念不忘 Hyprland 快捷键, 前前后后做了很多工作来模拟它.
 
 vdshortcut 是一个能用快捷键切换到指定序号的虚拟桌面的 Windows 小工具, 我没有做任何逆向工作, 直接引入了别人的 API 包.
 
-= #link("https://github.com/ParaN3xus/koioj")[koioj]
+= #gh-repo("https://github.com/ParaN3xus/koioj")
 
 我的数据库课程大作业. 这是一个功能完整的 OJ.
 

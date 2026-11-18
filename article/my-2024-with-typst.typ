@@ -1,4 +1,5 @@
 #import "/typ/templates/blog.typ": *
+#import "/typ/utils.typ": gh-repo, gh-user
 
 #show: main.with(
   title: "我与 Typst 的 2024",
@@ -34,9 +35,9 @@
 = 2024-7 到 2024-8: Typst 公式 OCR, Typress
 从这里开始总算对我狂热的社区有了一点贡献.
 
-其实做 Typst 公式 OCR 的想法很早就有了. 我记得是 4 月, 本来打算做一个 Typst 的公式 OCR 当课程作业交, 但是当时的想法太简单了, 随手拿了个 pandoc 转了点 LaTeX 公式就开始训练. 最开始我只是想先试试水, 就拿了 GitHub 上星星比较多的 #link("https://github.com/lukas-blecher/LaTeX-OCR")[LaTeX-OCR] 没改动就开始嗯训了, 但是最后结果毫无疑问是一大坨, 也就暂时放弃了这个想法.
+其实做 Typst 公式 OCR 的想法很早就有了. 我记得是 4 月, 本来打算做一个 Typst 的公式 OCR 当课程作业交, 但是当时的想法太简单了, 随手拿了个 pandoc 转了点 LaTeX 公式就开始训练. 最开始我只是想先试试水, 就拿了 GitHub 上星星比较多的 #gh-repo("https://github.com/lukas-blecher/LaTeX-OCR") 没改动就开始嗯训了, 但是最后结果毫无疑问是一大坨, 也就暂时放弃了这个想法.
 
-但是我一直很想做, 于是在放暑假之后和 #link("https://github.com/sjfhsjfh")[\@sjfhsjfh] 又重新开始了这个项目.
+但是我一直很想做, 于是在放暑假之后和 #gh-user("https://github.com/sjfhsjfh") 又重新开始了这个项目.
 
 其实公式 OCR 已经没什么秘密了. HuggingFace 上 TrOCR 嗯造出效果很好的 LaTeX OCR 模型有三四个. 但是他们有数据, 而 Typst 没有.
 
@@ -45,7 +46,7 @@
 == eq_query_rec
 我们首先想到的就是从真人手里拿数据. 但是当时大家普遍都有自己定义的小 snippets, 或者在使用各种第三方包(尤其是 physica), 我们不想让数据包含这些内容, 但是直接筛掉的话绝大多数数据都没有了, 所以写了这样的一个工具来提取公式.
 
-得益于 Typst 的强大功能, sjfhsjfh 写了 #link("https://github.com/sjfhsjfh/eq_query_rec")[eq_query_rec], 他可以编译 Typst 文档, 然后从里面查找出所有公式, 再根据公式编译好的内容重组出标准化后的公式(去除了第三方包, 用户自己的函数, 并同时完成公式形式的标准化).
+得益于 Typst 的强大功能, sjfhsjfh 写了 #gh-repo("https://github.com/sjfhsjfh/eq_query_rec"), 他可以编译 Typst 文档, 然后从里面查找出所有公式, 再根据公式编译好的内容重组出标准化后的公式(去除了第三方包, 用户自己的函数, 并同时完成公式形式的标准化).
 
 这在初期帮了我们大忙. 我们最开始仅有的 8K 条数据全都是小圈子里几个 Typst user 用这个工具提取的.
 
@@ -54,7 +55,7 @@ Typst user 的数量太有限了, 而且大群(指 Typst 非官方中文交流�
 
 其实转公式的工具已经有很多了, 就我而言, 我至少知道四个工具能达成这个任务. 但是 pandoc 效果太烂, mitex 比较专注视觉效果一致, 公式本身不像人写的, 还包含很多他自己定义的函数, 其他的效果也很一般. 我真正想要的是转出来的公式不仅视觉效果要一样, 还得必须"像人写的", 尤其是"像 Typst 用户"写的.
 
-所以最后我借用 KaTeX 的 parser 写了这个名字很豪的 #link("https://github.com/ParaN3xus/tex2typ")[tex2typ], 但是当时写的时候太急, 回过来味的时候发现已经写成史山了. 不过好在我们并不要求所有公式都能转, 毕竟是数据集, 大部分还在就 OK, 最终我们用这种方法获得了(疑似是)首个 100K 级别和 M 级别的 Typst 公式数据集.
+所以最后我借用 KaTeX 的 parser 写了这个名字很豪的 #gh-repo("https://github.com/ParaN3xus/tex2typ"), 但是当时写的时候太急, 回过来味的时候发现已经写成史山了. 不过好在我们并不要求所有公式都能转, 毕竟是数据集, 大部分还在就 OK, 最终我们用这种方法获得了(疑似是)首个 100K 级别和 M 级别的 Typst 公式数据集.
 
 == Typress
 我一直记得有一个群友抱怨 "没人想要抄写这一串东西(很长的公式)", 所以当第一版效果还行的模型训练出来之后(大概是七月中), 我就去群里报喜了. 没想到最激动的是群主, 不知道我有没有辜负他的期待(.
@@ -72,7 +73,7 @@ Typress 发出来是七月底的事情了, 当时只配了一个 GPT 生成的�
 
 其实我一开始以为就是改个依赖版本就好了, 没想到 Typst 在这几个月里面做了这么多 API 变动. 再加上这一套工具全都是群友科技, tinymist 依赖的 typst.ts, typstyle 也要一并修改, 所以我干脆就全都给适配到最新 Typst 了.
 
-我把这个发到群里的时候, tinymist 作者 #link("https://github.com/Myriad-Dreamin/")[\@纸夜] 大神提出可以做一个 `typst-shim` 包, 来减少 tinymist-nightly 和主线的摩擦, 然后我一个 Rust 小白就这样混上了 tinymist contributor. 后来纸夜大神又提出可以把一部分版本号给 tinymist-nightly, 然后我这个分支就成功转正, 进入了官方 tinymist 的仓库.
+我把这个发到群里的时候, tinymist 作者 #gh-user("https://github.com/Myriad-Dreamin") 大神提出可以做一个 `typst-shim` 包, 来减少 tinymist-nightly 和主线的摩擦, 然后我一个 Rust 小白就这样混上了 tinymist contributor. 后来纸夜大神又提出可以把一部分版本号给 tinymist-nightly, 然后我这个分支就成功转正, 进入了官方 tinymist 的仓库.
 
 再后来, 我的名字也被加到了 `MAINTAINERS.typ` 里面, 虽然好久没干活了(心虚), 预计寒假再开始工作.
 

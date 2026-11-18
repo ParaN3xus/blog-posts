@@ -1,4 +1,5 @@
 #import "/typ/templates/blog.typ": *
+#import "/typ/utils.typ": gh-issue, gh-user
 
 #show: main.with(
   title: "在 CI 中运行 Unity",
@@ -11,7 +12,7 @@
   license: licenses.cc-by-nc-sa,
 )
 
-方法来自 #link("https://github.com/game-ci/documentation/issues/408#issuecomment-3211109962")[game-ci/documentation/issue/408] 中 #link("https://github.com/GabLeRoux")[\@GabLeRoux] 的评论.
+方法来自 #gh-issue("https://github.com/game-ci/documentation/issues/408#issuecomment-3211109962") 中 #gh-user("https://github.com/GabLeRoux") 的评论.
 
 = 获取个人证书
 + Unity Hub → Preferences → Licenses → Add

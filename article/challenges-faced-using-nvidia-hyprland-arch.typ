@@ -1,4 +1,5 @@
 #import "/typ/templates/blog.typ": *
+#import "/typ/utils.typ": gh-issue, gh-pr
 
 #show: main.with(
   title: "NVIDIA + Hyprland + Arch 踩坑",
@@ -109,7 +110,7 @@ patch:
 
 = Special Workspace 中 XWayland 应用遮挡输入法
 
-这个是一个尚未修复 Bug, 在 Hyprland 仓库有相关 #link("https://github.com/hyprwm/Hyprland/issues/3503")[issue].
+这个是一个尚未修复 Bug, 在 Hyprland 仓库有相关 #gh-issue("https://github.com/hyprwm/Hyprland/issues/3503").
 
 不过就作者态度来看, 他大概不太会想修这个 Bug 了.
 
@@ -117,7 +118,7 @@ patch:
 
 #strike[我觉得这是个很典型的 Bug, 但是似乎 Hyprland 到现在也没有修复? 我也没有找到相关 issue.]
 
-我创建了一个 #link("https://github.com/hyprwm/Hyprland/pull/7368")[PR] 用于添加一个选项指定窗口关闭时, focus 转移的行为. 现在只需要指定 `input::focus_on_close = 1` 就能实现想要的效果.
+我创建了一个 #gh-pr("https://github.com/hyprwm/Hyprland/pull/7368") 用于添加一个选项指定窗口关闭时, focus 转移的行为. 现在只需要指定 `input::focus_on_close = 1` 就能实现想要的效果.
 
 
 = Chromium 首屏有概率渲染错乱
